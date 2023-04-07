@@ -1,5 +1,16 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { onMounted } from "vue";
+import { RouterView, useRouter } from 'vue-router'
+
+const router = useRouter();
+onMounted(() => {
+  // Github pages SPA workaround
+  let path = localStorage.getItem("path");
+  if (path) {
+    localStorage.removeItem("path");
+    router.push(path);
+  }
+});
 </script>
 
 <template>
