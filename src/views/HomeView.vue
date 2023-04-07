@@ -46,7 +46,8 @@
       backgroundColor: isBetweenTargetCircles ? 'green' : 'gray',
     }"></div>
   </div>
-  <div class="click-area" @mousedown="onPress" @touchstart="onPress" @mouseup="onRelease" @touchend="onRelease"></div>
+  <div class="click-area no-highlights" @mousedown="onPress" @touchstart="onPress" @mouseup="onRelease"
+    @touchend="onRelease"></div>
 </template>
 
 <script lang="ts" setup>
